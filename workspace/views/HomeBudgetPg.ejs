@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home Budget</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<fieldset> 
+		
+				<form action="/homebudget" method="POST">
+		
+						<legend>Fill out your Financial Spendings</legend>
+						<p>Description: <input type="text" name="FirstName" size="20" id="FirstName"> Price: <input type="text" name="Price" size="20" id="FirstName"> Date:<input type="text" name="LastName" size="20" id="LastName"> Category:<input type="text" name="Category" size="20" id="Today"></p>
+				
+						<!--<div class="subButton"><button method="post"  action="<?php echo $_SERVER['PHP_SELF']; ?>" type="button" onclick="transferInfo()">Calculate</button></div> -->
+						<button>Calculate</button>
+						
+						
+						<br>
+						
+						<textarea id="Feedback" rows="32" cols="125" name="board" readonly></textarea>
+						
+						
+				</form>
+						
+		</fieldset>
+	</body>
+</html>

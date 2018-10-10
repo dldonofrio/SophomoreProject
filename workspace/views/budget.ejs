@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>BLISS BUDGET</title>
+		<meta charset="utf-8">
+	</head>
+<body>
+    <% budgets.forEach(function(budget){ %>
+        <li><%= budget.name %> 
+            <ul>
+                <p><%= budget.amount %> <%= budget.category %> </p>
+                <ul>
+                    <p> <%= budget.date %> </p>
+                </ul>
+            </ul>
+        </li> 
+    <% }); %>
+    
+    
+    		
+    		<div class="nav">
+				<a href="bliss_finance_app/views/HomeBudgetPg.html" class="nav" target="_blank">Home Budget</a>
+				<a href="assetes/html/business.html" class="nav" target="_blank">Business Budget</a>
+				<a href="assetes/html/school.html" class="nav" target="_blank">School Budget</a>
+				<a href="assetes/html/personal.html" class="nav" target="_blank">Personal Budget</a>
+			</div>
+    
+    
+    
+    
+    
+    
+
+    <form action="/addbudget" method="POST">
+        <div>
+            <input type="radio" name="isPersonal" value="1"/>
+            <label for="personal">Personal</label>
+            <input type="radio" name="isPersonal" value="0"/>
+            <label for="personal">Business</label>
+        </div>
+        <input type="text" name="name" placeholder="Name">
+    
+        <input type="text" name="amount" placeholder="Amount">
+        
+        <input type="text" name="category" placeholder="Category">
+    
+        <button>Add To Budget</button>
+    </form>
+</body>
+
+
+
+
+</html>
